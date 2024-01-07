@@ -7,6 +7,10 @@ import HookUseContext from './hooks-components/HookUseContext'
 import HookUseReducer from './hooks-components/HookUseReducer'
 import HooksUseReducerAndUseContext from './hooks-components/HooksUseReducerAndUseContext'
 import DataFetchingUseReducer from './hooks-components/DataFetchingUseReducer'
+import HookUseCallback from './hooks-components/HookUseCallback'
+import HookUseMemo from './hooks-components/HookUseMemo'
+import HookUseRef from './hooks-components/HookUseRef'
+import CustomHookUseDocumentTitle from './hooks-components/CustomHookUseDocumentTitle'
 
 
 // STEPS to consume Context value with Context API
@@ -68,6 +72,14 @@ function App() {
 
 
       <DataFetchingUseReducer />
+
+      <HookUseCallback />
+
+      <HookUseMemo />
+
+      <HookUseRef />
+
+      <CustomHookUseDocumentTitle />
     </div>
   )
 }
