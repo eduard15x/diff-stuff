@@ -31,6 +31,9 @@
             arrayOne.DeleteFromAnywhere();
 
             // array search
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Array - Linear search");
+            Console.WriteLine("---------------------");
             SearchMeth searchMeth = new SearchMeth();
             searchMeth.LinearSearch();
 
@@ -52,7 +55,13 @@
             nodeB.Next = nodeC;
             nodeC.Next = nodeD;
 
+
+
+
             // linked list
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Linked List");
+            Console.WriteLine("---------------------");
             LinkedList linkedList = new LinkedList();
             // insert
             linkedList.InsertFirst(1);
@@ -70,7 +79,12 @@
             linkedList.DisplayList();
 
 
+
+
             // stack
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Stack");
+            Console.WriteLine("---------------------");
             Stack myStack = new Stack(10);
 
             Console.WriteLine(myStack.isEmpty());
@@ -94,21 +108,28 @@
             Console.WriteLine(myStack.isEmpty());
 
 
+
+
             // Queue
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Queue");
+            Console.WriteLine("---------------------");
             QueueC myQueue = new QueueC(10);
 
             myQueue.Enqueue(1);
             myQueue.Enqueue(2);
             myQueue.Enqueue(3);
             myQueue.Enqueue(4);
-
             myQueue.Dequeue();
             myQueue.Dequeue();
-
             myQueue.Peek();
 
 
+
             // Binary search
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Binary search");
+            Console.WriteLine("---------------------");
             SearchMeth searchMethTwo = new SearchMeth();
             searchMethTwo.BinarySearch();
         }
