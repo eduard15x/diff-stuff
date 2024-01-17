@@ -144,6 +144,11 @@
             binarySearchTree.Insert(1, "PokemonNr1");
 
             Console.WriteLine(binarySearchTree.Find(151));
+
+
+
+            // BUBBLE SORT
+            searchMeth.BubbleSort();
         }
     }
 }

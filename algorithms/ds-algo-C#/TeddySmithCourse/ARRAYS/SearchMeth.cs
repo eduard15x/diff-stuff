@@ -87,5 +87,48 @@ namespace TeddySmithCourse
             }
 
         }
+
+
+        // BUBBLE SORT
+        // easy but BAD - quadratic - n2
+        // learning swaps / nested forloops
+        // turn this [5,6,1,7,2,4] ---->>>>> into this [1,2,4,5,6,7]
+        // comparing 2 by 2: example comparing 5,6 --->> 6,1 (swap) ---->> 6,7  ---->>> 7,2 (swap) ---> 7,4 (swap)
+        // do again same
+        public void BubbleSort()
+        {
+            int[] intArray = new int[] {5, 6, 1, 7, 2, 4};
+
+            Console.WriteLine("-----------");
+            Console.WriteLine("BUBBLE SORT");
+            Console.WriteLine("-----------");
+
+            // hold the temporary swap variable. Think of this as a state.
+            int temp = 0;
+
+            // iterates over entire loop many times
+            for (int pointer = 0; pointer < intArray.Length; pointer++)
+            {
+                // forms the 'box that does the comparison'
+                for (int sort = 0; sort < intArray.Length - 1; sort++)
+                {
+                    // this checks to see if
+                    if (intArray[sort] > intArray[sort +1])
+                    {
+                        // we store variable as temp so we dont overwrite it when we swap
+                        temp = intArray[sort + 1];
+                        // put left to the right
+                        intArray[sort + 1] = intArray[sort];
+                        // put the right to the left
+                        intArray[sort] = temp;
+                    }
+                }
+            }
+
+            foreach (var nr in intArray)
+            {
+                Console.WriteLine(nr);
+            }
+        }
     }
 }
