@@ -132,6 +132,18 @@
             Console.WriteLine("---------------------");
             SearchMeth searchMethTwo = new SearchMeth();
             searchMethTwo.BinarySearch();
+
+
+
+            // BINARY SEARCH TREES
+            BinarySearchTree binarySearchTree = new BinarySearchTree();
+            binarySearchTree.Insert(7, "PokemonNr7");
+            binarySearchTree.Insert(23, "PokemonNr23");
+            binarySearchTree.Insert(151, "PokemonNr151");
+            binarySearchTree.Insert(4, "PokemonNr4");
+            binarySearchTree.Insert(1, "PokemonNr1");
+
+            Console.WriteLine(binarySearchTree.Find(151));
         }
     }
 }
