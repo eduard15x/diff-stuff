@@ -1,4 +1,6 @@
-﻿namespace TeddySmithCourse
+﻿using TeddySmithCourse.RECURSION;
+
+namespace TeddySmithCourse
 {
     internal class Program
     {
@@ -148,7 +150,24 @@
 
 
             // BUBBLE SORT
+            Console.WriteLine("---------------------");
+            Console.WriteLine("BUBBLE SORT");
+            Console.WriteLine("---------------------");
             searchMeth.BubbleSort();
+
+
+
+            // RECURSION
+            Console.WriteLine("---------------------");
+            Console.WriteLine("RECURSION");
+            Console.WriteLine("---------------------");
+            Recursion recursion = new Recursion();
+
+            var factorialOf_5_iter = recursion.IterativeFactorial(5);
+            Console.WriteLine(factorialOf_5_iter);
+
+            var factorialOf_5_recurs = recursion.RecursionFactorial(5);
+            Console.WriteLine(factorialOf_5_recurs);
         }
     }
 }
