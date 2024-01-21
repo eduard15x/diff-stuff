@@ -168,6 +168,20 @@ namespace TeddySmithCourse
 
             var factorialOf_5_recurs = recursion.RecursionFactorial(5);
             Console.WriteLine(factorialOf_5_recurs);
+
+
+
+            // HASH TABLE
+            Console.WriteLine("---------------------");
+            Console.WriteLine("HASH TABLE");
+            Console.WriteLine("---------------------");
+            HashTable hashTable = new HashTable();
+
+            hashTable.Set("lord", "Jason");
+            hashTable.Set("king", "Edy");
+            hashTable.Set("queen", "Katy");
+
+            System.Console.WriteLine(hashTable.Get("king"));
         }
     }
 }
