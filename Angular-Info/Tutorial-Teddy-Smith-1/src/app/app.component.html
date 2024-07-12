@@ -455,3 +455,31 @@
 
 <p>Big Chunks of components</p>
 <p>Separation of code</p>
+<p><strong>Project Structure</strong></p>
+<p>-core - App</p>
+<br />
+<p>-feature - pokemon admin</p>
+<br />
+<p>-shared</p>
+<ul>
+  <li>services</li>
+  <li>components</li>
+  <li>universal</li>
+</ul>
+
+<br />
+<p>routing -injdex</p>
+
+<p><strong>IMPORTANT ABOUT MODULES</strong></p>
+<h3>**LAZY LOADING** -> modules will only load when they are use</h3>
+<p>modules provides logical separation</p>
+<ul>
+  <h2>commands</h2>
+  <li>ng generate module pokemon-base</li>
+  <li>
+    ng generate component pokemon-base/pokemon-list
+    --module=pokemon-base/pokemon-base.module.ts
+  </li>
+</ul>
+<p>APP</p>
+<p>module -> <span>Pokemon</span></p>

@@ -1,0 +1,12 @@
+<div>
+  <h2>{{ pokemonListTitle }}</h2>
+
+  <ul>
+    <PokemonDetails
+      *ngFor="let pokemon of pokemonList; let i = index"
+      [details]="pokemon"
+      [pokemonIndex]="i"
+      (remove)="handleRemove($event)"
+    ></PokemonDetails>
+  </ul>
+</div>

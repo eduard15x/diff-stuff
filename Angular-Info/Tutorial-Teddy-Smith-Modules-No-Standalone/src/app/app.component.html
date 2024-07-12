@@ -1,0 +1,178 @@
+<main>
+  <!-- {{ title }}
+  {{ nrOne + nrTwo }}
+  {{ togglePokemon ? "is poke" : "is not poke" }} -->
+
+  <!-- <h1>Property binding</h1>
+  <h2 [innerHTML]="title"></h2>
+  <h2>{{ title }}</h2>
+  <img [src]="imageSrc" alt="no image" /> -->
+  <!-- 
+  <h2>Two-way binding, most used for forms</h2>
+  <p>
+    this is the form: [()] -> [] binding data to element, () setting event when
+    dom change or smth
+  </p>
+  <p>NgModel -> only for inputs and textarea</p>
+  <input [(ngModel)]="favoriteAnimal" />
+  <p>{{ favoriteAnimal }}</p>
+  <br />
+  <h2>Template reference variable - using #</h2>
+  <input type="text" #pokemonName />
+  <button (click)="handleClick(pokemonName)">Check it</button> -->
+  <!-- 
+  <br />
+
+  <h2>ngClass</h2>
+  <table>
+    <thead>
+      <th>index</th>
+      <th>name</th>
+      <th>type</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemonList; let i = index">
+        <td [class.cool-bool]="pokemon.isCool">{{ pokemon.id }}</td>
+        <td>{{ pokemon.name }}</td>
+        <td [class.cool-bool]="pokemon.isCool">{{ pokemon.type }}</td>
+      </tr>
+      <br />
+      <h3>another way</h3>
+
+      <tr *ngFor="let pokemon of pokemonList; let i = index">
+        <td [ngClass]="{ 'cool-bool': pokemon.isCool }">{{ pokemon.id }}</td>
+        <td>{{ pokemon.name }}</td>
+        <td [ngClass]="{ 'cool-bool': pokemon.isCool }">{{ pokemon.type }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br /> -->
+  <!-- 
+  <h2>ngStyle</h2>
+  <table>
+    <thead>
+      <th>index</th>
+      <th>name</th>
+      <th>type</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemonList; let i = index">
+        <td [style.backgroundColor]="pokemon.isStylish ? '#ee8787' : ''">
+          {{ pokemon.id }}
+        </td>
+        <td>{{ pokemon.name }}</td>
+        <td [style.backgroundColor]="pokemon.isStylish ? '#ee8787' : ''">
+          {{ pokemon.type }}
+        </td>
+      </tr>
+      <br />
+      <h3>another way</h3>
+
+      <tr *ngFor="let pokemon of pokemonList; let i = index">
+        <td [ngStyle]="{ backgroundColor: pokemon.isStylish ? '#ee8787' : '' }">
+          {{ pokemon.id }}
+        </td>
+        <td>{{ pokemon.name }}</td>
+        <td [ngStyle]="{ backgroundColor: pokemon.isStylish ? '#ee8787' : '' }">
+          {{ pokemon.type }}
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+  <!-- 
+  <br />
+  <br />
+  <h2>ngIf</h2>
+  <h2>IMPORTANT</h2>
+  <h3>!!! data down - events up !!!</h3>
+
+  <input type="text" [value]="firstName" (input)="handleChange($event)" />
+  <p *ngIf="firstName; else noValue">{{ firstName }}</p>
+
+  <ng-template #noValue>
+    <p>No Value</p>
+  </ng-template>
+
+  <br /><br />advanced way<br />
+
+  <ng-container
+    *ngIf="firstName; then firstNameValue; else noName"
+  ></ng-container>
+
+  <ng-template #firstNameValue>{{ firstName }}</ng-template>
+  <ng-template #noName>No name</ng-template> -->
+  <!-- 
+  <br />
+  <br />
+  <h2>ngFor</h2>
+  <h2>IMPORTANT</h2>
+
+  <div>
+    <h3>Pokemon List</h3>
+    <div *ngFor="let pokemond of pokemonList" class="flex">
+      <div>ID-{{ pokemond.id }}</div>
+      <div>NAME-{{ pokemond.name }}</div>
+      <div>TYPE-{{ pokemond.type }}</div>
+    </div>
+  </div> -->
+
+  <!-- MODULES -->
+
+  <!-- <br />
+  <br />
+  <h2>Modules</h2>
+  <h2>IMPORTANT</h2>
+
+  <p>Big Chunks of components</p>
+  <p>Separation of code</p>
+  <p><strong>Project Structure</strong></p>
+  <p>-core - App</p>
+  <br />
+  <p>-feature - pokemon admin</p>
+  <br />
+  <p>-shared</p>
+  <ul>
+    <li>services</li>
+    <li>components</li>
+    <li>universal</li>
+  </ul>
+
+  <br />
+  <p>routing -injdex</p>
+
+  <p><strong>IMPORTANT ABOUT MODULES</strong></p>
+  <h3>**LAZY LOADING** -> modules will only load when they are use</h3>
+  <p>modules provides logical separation</p>
+  <ul>
+    <h2>commands</h2>
+    <li>ng generate module pokemon-base</li>
+    <li>
+      ng generate component pokemon-base/pokemon-list
+      --module=pokemon-base/pokemon-base.module.ts
+    </li>
+  </ul>
+  <p>APP</p>
+  <p>module -> <span>Pokemon</span></p>
+
+  <h1>Here project starts, adding first component</h1>
+
+  <h2>
+    List/Details Pattern/Topic - Check it, Learn it, Master It - Input explained
+  </h2>
+  <br />
+  <br /> -->
+  <!-- <h2>
+    List/Details Pattern/Topic - Check it, Learn it, Master It - Outpus/Events explained
+  </h2>
+  
+  <br />
+  <br />  -->
+
+  <!-- <h2>
+    Input sending data to props down
+    <br />
+    Output sending events/data up (from child)
+  </h2> -->
+  <PokemonList />
+</main>
