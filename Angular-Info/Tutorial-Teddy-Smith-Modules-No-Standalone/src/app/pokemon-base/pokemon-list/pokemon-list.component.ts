@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'; // angular core is a module in node_modules
 import { Pokemon } from '../../models/pokemon';
+import { PokemonService } from '../../services/pokemon.service';
 
 // Decorator pattern
 @Component({
@@ -9,17 +10,18 @@ import { Pokemon } from '../../models/pokemon';
 })
 export class PokemonListComponent implements OnInit {
   pokemonListTitle: string = 'Pokemon List';
-  pokemonList: Pokemon[];
+  pokemonList: Pokemon[] = [];
 
-  constructor() {
-    this.pokemonList = [
-      { id: 1, name: 'Pikachu', type: 'strong', isCool: true, isStylish: true },
-      { id: 2, name: 'Rudolph', type: 'weak', isCool: true, isStylish: false },
-    ];
-  }
+  constructor(private pokemonService: PokemonService) {}
   ngOnInit(): void {
     // lifecycle method (like onMounted in react/vue -> the first thing that happens, but not before constructor :), constructor initializes class)
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
+    //  this.pokemonList =
+    this.pokemonService.getPokemons().subscribe((data: Pokemon[]) => {
+      console.log(data);
+      console.table(data);
+      this.pokemonList = data;
+    });
   }
 
   handleRemove(event: Pokemon): void {

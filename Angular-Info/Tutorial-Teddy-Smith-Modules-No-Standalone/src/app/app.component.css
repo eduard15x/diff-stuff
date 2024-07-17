@@ -1,0 +1,9 @@
+.active-link {
+  color: red;
+  font-weight: 700;
+}
+
+.nav-routes {
+  display: flex;
+  flex-direction: column;
+}

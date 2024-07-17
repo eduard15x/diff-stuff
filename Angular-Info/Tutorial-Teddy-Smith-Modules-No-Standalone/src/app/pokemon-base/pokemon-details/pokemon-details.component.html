@@ -1,4 +1,9 @@
-<li>
+<ng-content>
+  <!-- will take all as slot -->
+</ng-content>
+<ng-content select="h1"> </ng-content>
+
+<li *ngIf="details">
   <p>Index - {{ pokemonIndex }}</p>
   <p>Id - {{ details.id }}</p>
   <p>Name - {{ details.name }}</p>
@@ -6,4 +11,7 @@
   <p>IsCool - {{ details.isCool ? "true" : "false" }}</p>
   <p>isStylish - {{ details.isStylish ? "true" : "false" }}</p>
   <button (click)="onRemove()">Remove Pokemon</button>
+  <button [routerLink]="['/pokemon', details.id]">Details</button>
 </li>
+
+<p *ngIf="!details">Loading...</p>

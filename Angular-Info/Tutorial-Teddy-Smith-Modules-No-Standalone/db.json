@@ -1,0 +1,18 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Pikachu",
+      "type": "strong",
+      "isCool": true,
+      "isStylish": true
+    },
+    {
+      "id": 2,
+      "name": "Rudolph",
+      "type": "weak",
+      "isCool": true,
+      "isStylish": false
+    }
+  ]
+}

@@ -1,13 +1,12 @@
-<main>
-  <!-- {{ title }}
+<!-- {{ title }}
   {{ nrOne + nrTwo }}
   {{ togglePokemon ? "is poke" : "is not poke" }} -->
 
-  <!-- <h1>Property binding</h1>
+<!-- <h1>Property binding</h1>
   <h2 [innerHTML]="title"></h2>
   <h2>{{ title }}</h2>
   <img [src]="imageSrc" alt="no image" /> -->
-  <!-- 
+<!-- 
   <h2>Two-way binding, most used for forms</h2>
   <p>
     this is the form: [()] -> [] binding data to element, () setting event when
@@ -20,7 +19,7 @@
   <h2>Template reference variable - using #</h2>
   <input type="text" #pokemonName />
   <button (click)="handleClick(pokemonName)">Check it</button> -->
-  <!-- 
+<!-- 
   <br />
 
   <h2>ngClass</h2>
@@ -48,7 +47,7 @@
   </table>
 
   <br /> -->
-  <!-- 
+<!-- 
   <h2>ngStyle</h2>
   <table>
     <thead>
@@ -80,7 +79,7 @@
       </tr>
     </tbody>
   </table> -->
-  <!-- 
+<!-- 
   <br />
   <br />
   <h2>ngIf</h2>
@@ -102,7 +101,7 @@
 
   <ng-template #firstNameValue>{{ firstName }}</ng-template>
   <ng-template #noName>No name</ng-template> -->
-  <!-- 
+<!-- 
   <br />
   <br />
   <h2>ngFor</h2>
@@ -117,9 +116,9 @@
     </div>
   </div> -->
 
-  <!-- MODULES -->
+<!-- MODULES -->
 
-  <!-- <br />
+<!-- <br />
   <br />
   <h2>Modules</h2>
   <h2>IMPORTANT</h2>
@@ -162,17 +161,89 @@
   </h2>
   <br />
   <br /> -->
-  <!-- <h2>
+<!-- <h2>
     List/Details Pattern/Topic - Check it, Learn it, Master It - Outpus/Events explained
   </h2>
   
   <br />
   <br />  -->
 
-  <!-- <h2>
+<!-- <h2>
     Input sending data to props down
     <br />
     Output sending events/data up (from child)
   </h2> -->
-  <PokemonList />
-</main>
+<!-- <PokemonList /> -->
+
+<!--
+  <br />
+  <br />
+  <h2>
+    Dependency Injection & Services
+    <br />
+    Must be added to the module in 'providers' list
+  </h2>
+  <p>
+    for this app we will keep our LIST (pokemon list) in an abstract services so you can inject/use this list around application, and also in other components not only in Details
+  </p>
+  <p>ng generate service [name]</p>
+  -->
+
+<!--
+  <br />
+  <br />
+  <h2>
+    Observables
+    <br />
+    make our code asynchronous
+  </h2>
+  <p>
+    FRONTEND > UPDATE UI / NOT FREEZE <br />
+    BACKEND > PERFORMANCE
+  </p>
+  <p>Observable (subject), --- , Observers (subscribers)</p>
+  -->
+
+<!--
+  <br />
+  <br />
+  <h2>
+    Angular Forms - Template / Reactive (ngForm)
+    <br />
+    ngModel - ngForm
+  </h2>
+  <p>
+     ngModel - everywhere
+     ngForm - Template
+  </p>
+
+  <h3>1.BUILD</h3>
+  <p>HTML + MODEL (pokemon)</p>
+  <h3>2.BIND</h3>
+  <form #form="ngForm">
+    <input [ngModel]="modelName.property" name="property" />
+  </form>
+
+  <h3>3.TRACK</h3>
+  <p>Validation</p>
+
+  <h3>4.SUBMIT</h3>
+  -->
+
+<!-- <br />
+<br /> -->
+<!-- <PokemonTemplateForm /> -->
+<!-- <PokemonList /> -->
+<router-outlet></router-outlet>
+<div class="nav-routes">
+  <a
+    *ngFor="let item of nav"
+    [routerLink]="item.link"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: item.exact }"
+  >
+    <!-- routerLinkActive -> will automatically add a class for current link that you are navigating -->
+    <!-- routerLinkActiveOptions ->  -->
+    {{ item.name }}
+  </a>
+</div>

@@ -11,6 +11,7 @@ export class PokemonDetailsComponent implements OnInit {
   details!: Pokemon;
   @Input()
   pokemonIndex!: number;
+
   @Output()
   remove: EventEmitter<any> = new EventEmitter(); // eventEmitter is an observable
   // TODO build your own observable to understand better

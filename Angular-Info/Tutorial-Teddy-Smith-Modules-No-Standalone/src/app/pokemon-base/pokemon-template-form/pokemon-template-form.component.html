@@ -1,0 +1,104 @@
+<div>
+  <!-- you will need form modules in app.module -->
+  <form #form="ngForm" (ngSubmit)="handleSubmit(form.value)">
+    <!-- input -->
+    <div>
+      <label for="name"
+        >Pokemon Name:
+        <input
+          type="text"
+          [(ngModel)]="singlePokemon.name"
+          name="name"
+          id="name"
+          #pokemonName="ngModel"
+      /></label>
+    </div>
+
+    <!-- radio buttons -->
+    <div>
+      Is Cool:
+      <label for="isCoolTrue">
+        True
+        <input
+          type="radio"
+          name="isCool"
+          id="isCoolTrue"
+          [value]="true"
+          [ngModel]="singlePokemon.isCool"
+          (ngModelChange)="toggleIsCool($event)"
+        />
+      </label>
+
+      <label for="isCoolFalse">
+        False
+        <input
+          type="radio"
+          name="isCool"
+          id="isCoolFalse"
+          [value]="false"
+          [ngModel]="singlePokemon.isCool"
+          (ngModelChange)="toggleIsCool($event)"
+        />
+      </label>
+    </div>
+
+    <!-- checkbox -->
+    <div>
+      <label for="acceptTerms">Accept Terms</label>
+      <input
+        type="checkbox"
+        name="acceptTerms"
+        [ngModel]="singlePokemon.acceptTerms"
+      />
+    </div>
+
+    <!-- select with options -->
+    <label>Select pokemon type</label>
+    <select name="pokemonType" [ngModel]="singlePokemon.type">
+      <option
+        *ngFor="let pokemonType of pokemonTypeList"
+        [value]="pokemonType.key"
+        [selected]="pokemonType.value === singlePokemon.type"
+      >
+        {{ pokemonType.value }}
+      </option>
+    </select>
+
+    <!-- FORM VALIDATION -->
+    <h2>FORM VALIDATION - TEMPLATE DRIVEN FORMS</h2>
+    <p>
+      #pokemonName="ngModel" -> this is a template reference variable as an
+      element attribute
+    </p>
+    <p>
+      <strong>types of validation:</strong> .valid(conditions ok ) /
+      .pristine(not modify input at all) / .touched(input was touched)
+    </p>
+    <p>
+      <strong
+        >opossite types of validation .invalid / .dirty / .untouched !=</strong
+      >
+    </p>
+    <button type="submit" [disabled]="!form.valid">Save Pokemon</button>
+    <button type="button" (click)="navigateBack()">Go back</button>
+  </form>
+
+  <h1>this is a pipe</h1>
+  MODEL: {{ singlePokemon | json }}
+  <!-- this doesnt work -> [Object Object] -->
+  <br />
+  MODEL: {{ singlePokemon }}
+  <br />
+  <h2>Populated form in 2way data binding</h2>
+  FORM: {{ form.value | json }}
+  <br />
+  <br /><br /><br /><br /><br />
+  <div>
+    Error:
+    <div *ngIf="!pokemonName.pristine">NOT PRISTINE ANYMORE, it IS DIRTY</div>
+    <div *ngIf="!pokemonName.touched">NOT TOUCHED , it IS TOUCHED</div>
+    <div *ngIf="!pokemonName.valid">NOT VALID , it IS INVALID</div>
+  </div>
+
+  <br /><br /><br />
+</div>
