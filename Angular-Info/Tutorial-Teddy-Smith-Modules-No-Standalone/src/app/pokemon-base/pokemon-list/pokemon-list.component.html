@@ -1,8 +1,12 @@
 <div>
   <h2>{{ pokemonListTitle }}</h2>
+  <!-- Example of how to use ElementRef -->
+
+  <p #pokemonListDescription></p>
 
   <ul>
     <PokemonDetails
+      #pokemonRef
       *ngFor="let pokemon of pokemonList; let i = index"
       [details]="pokemon"
       [pokemonIndex]="i"
@@ -11,4 +15,15 @@
       THIS WILL GO TO NGCONTENT AS SLOT</PokemonDetails
     >
   </ul>
+
+  <div highlighttext>This is highlighted text by custom directive</div>
+  <h1 *customif="true">THis is custom if directive true</h1>
+  <h1 *customif="false">THis is custom if directive false</h1>
 </div>
+
+<!-- DIRECTIVES -->
+<!-- CLASS THAT ADDS NEW BEHAVIOR TO ELEMENTS -->
+
+<!-- 1. Component DIRECTIVES -->
+<!-- 2. Structural DIRECTIVES --- *ngIf ---- *ngFor ---- -->
+<!-- 3. Attribute DIRECTIVES: ---- [ngStyle] ---- [ngClass] ---- -->
