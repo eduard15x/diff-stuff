@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "John",
+    "Age": 18,
+    "City": "New York",
+    "isMajor": false
+  },
+  {
+    "Name": "Anna",
+    "Age": 22,
+    "City": "London",
+    "isMajor": true
+  },
+  {
+    "Name": "Mike",
+    "Age": 32,
+    "City": "Chicago",
+    "isMajor": true
+  }
+]
