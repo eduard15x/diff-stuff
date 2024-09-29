@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<List>
+  <Item>
+    <Name>John</Name>
+    <Age>18</Age>
+    <City>New York</City>
+    <isMajor>false</isMajor>
+  </Item>
+  <Item>
+    <Name>Anna</Name>
+    <Age>22</Age>
+    <City>London</City>
+    <isMajor>true</isMajor>
+  </Item>
+  <Item>
+    <Name>Mike</Name>
+    <Age>32</Age>
+    <City>Chicago</City>
+    <isMajor>true</isMajor>
+  </Item>
+</List>
