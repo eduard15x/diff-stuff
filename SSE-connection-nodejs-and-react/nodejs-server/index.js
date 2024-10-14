@@ -1,24 +1,27 @@
 const express = require("express");
 const multer = require("multer");
-const fs = require("fs");
-const path = require("path");
-
+const cors = require("cors");
 const app = express();
 const upload = multer({ dest: "uploads/" });
+
+app.use(cors());
 
 let clients = []; // Store clients connected via SSE
 
 // Endpoint for SSE connection to stream progress
 app.get("/invoice-progress", (req, res) => {
-  console.log("test");
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
   res.setHeader("Connection", "keep-alive");
+  res.flushHeaders(); // Ensure headers are sent immediately
 
   clients.push(res);
+  console.log("Client connected. Total clients:", clients.length);
 
+  // Clean up when connection closes
   req.on("close", () => {
     clients = clients.filter((client) => client !== res);
+    console.log("Client disconnected. Total clients:", clients.length);
   });
 });
 
@@ -31,21 +34,34 @@ const sendProgressUpdate = (fileName, data, progress) => {
 
 // Upload endpoint (handles multiple files)
 app.post("/upload-invoices", upload.array("files"), async (req, res) => {
+  console.log("upload-invoice");
   const files = req.files;
   let processedCount = 0;
+  let progress = 0;
 
+  // Wait until at least one SSE client is connected before processing files
+  const waitForClient = () =>
+    new Promise((resolve) => {
+      const checkClients = setInterval(() => {
+        if (clients.length > 0) {
+          clearInterval(checkClients);
+          resolve();
+        }
+      }, 100); // Check every 100ms if a client is connected
+    });
+
+  await waitForClient(); // Wait for an SSE connection
+
+  // Process files after ensuring at least one client is connected
   for (const file of files) {
     try {
-      // Simulate processing delay
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      sendProgressUpdate(file.originalname, {}, progress); // Initial progress
+      await new Promise((resolve) => setTimeout(resolve, 200)); // Simulated processing delay
 
-      // Mock data extraction (you would use your AI extraction service here)
       const extractedData = { invoiceNumber: "12345", totalAmount: "$1000" };
-
       processedCount++;
-      const progress = (processedCount / files.length) * 100;
+      progress = (processedCount / files.length) * 100;
 
-      // Send progress update to clients
       sendProgressUpdate(file.originalname, extractedData, progress);
     } catch (err) {
       console.error(err);
