@@ -1,4 +1,5 @@
 using AzureServiceBusWebApisDemo.ServiceBusDelivery.AzureServiceBus;
+using AzureServiceBusWebApisDemo.ServiceBusDelivery.Models;
 using Newtonsoft.Json;
 
 namespace EmailAPI.BackgroundService
@@ -14,6 +15,7 @@ namespace EmailAPI.BackgroundService
             _serviceBusQueue = serviceBusQueue;
         }
 
+        // Receive single queue
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             _logger.LogInformation("Listener Started");
@@ -23,8 +25,25 @@ namespace EmailAPI.BackgroundService
                 var messageReceived = await _serviceBusQueue.ReceiveMessage("emailorderqueue");
                 Console.WriteLine(messageReceived.OrderId);
                 Console.WriteLine(messageReceived.OrderName);
-                Console.ReadLine();
             }
         }
+
+        // Receive batch of messages
+        // protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        // {
+        //     _logger.LogInformation("Listener Started For Batch of messages");
+
+        //     while (!stoppingToken.IsCancellationRequested)
+        //     {
+        //         var messagesList = await _serviceBusQueue.ReceiveMessagesBatch<Order>("emailorderqueue");
+        //         foreach (var message in messagesList)
+        //         {
+        //             Console.WriteLine(message.ToString());
+        //             Console.WriteLine(message.OrderId);
+        //             Console.WriteLine(message.OrderName);
+        //             Console.WriteLine("--------------");
+        //         }
+        //     }
+        // }
     }
 }
