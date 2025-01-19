@@ -1,5 +1,7 @@
 using AzureServiceBusWebApisDemo.ServiceBusDelivery.AzureServiceBus;
+using AzureServiceBusWebApisDemo.ServiceBusDelivery.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace OrderAPI.Controllers;
 
@@ -20,20 +22,19 @@ public class OrderController : ControllerBase
     [HttpPost(Name = "SendOrderToEmail")]
     public async Task<IActionResult> SendOrderToEmail()
     {
-
-        DateTime sendingTimeMessage = DateTime.UtcNow;
-
-        var createdOrder = new
+        var createdOrder = new Order
         {
-            OrderId = 1231,
-            OrderName = "Nike Shoes",
-            OrderEmailAssigned = $"precupeduard99@gmai.com, {sendingTimeMessage}"
+            OrderId = Guid.NewGuid(),
+            OrderName = "Order Random Name"
         };
 
-        await _serviceBusQueue.SendMessage("emailorderqueue", createdOrder.OrderEmailAssigned);
+        await _serviceBusQueue.SendMessage("emailorderqueue", JsonConvert.SerializeObject(createdOrder));
 
+        Console.WriteLine("--------------------------");
         _logger.LogInformation("Send order to email queue.");
         Console.WriteLine("Send order to email queue.");
+        Console.WriteLine("Send order to email queue.");
+        Console.WriteLine("--------------------------");
         return Ok(createdOrder);
     }
 }

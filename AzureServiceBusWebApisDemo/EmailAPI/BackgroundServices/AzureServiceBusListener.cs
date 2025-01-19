@@ -1,5 +1,5 @@
-
 using AzureServiceBusWebApisDemo.ServiceBusDelivery.AzureServiceBus;
+using Newtonsoft.Json;
 
 namespace EmailAPI.BackgroundService
 {
@@ -20,8 +20,10 @@ namespace EmailAPI.BackgroundService
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                string messageReceived = await _serviceBusQueue.ReceiveMessage("emailorderqueue");
-                Console.WriteLine(messageReceived);
+                var messageReceived = await _serviceBusQueue.ReceiveMessage("emailorderqueue");
+                Console.WriteLine(messageReceived.OrderId);
+                Console.WriteLine(messageReceived.OrderName);
+                Console.ReadLine();
             }
         }
     }

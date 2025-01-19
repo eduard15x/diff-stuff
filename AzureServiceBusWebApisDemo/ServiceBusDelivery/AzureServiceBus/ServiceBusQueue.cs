@@ -1,5 +1,8 @@
 using System.Text;
+using System.Text.Json.Serialization;
 using Azure.Messaging.ServiceBus;
+using AzureServiceBusWebApisDemo.ServiceBusDelivery.Models;
+using Newtonsoft.Json;
 
 namespace AzureServiceBusWebApisDemo.ServiceBusDelivery.AzureServiceBus
 {
@@ -31,7 +34,7 @@ namespace AzureServiceBusWebApisDemo.ServiceBusDelivery.AzureServiceBus
             }
         }
 
-        public async Task<string> ReceiveMessage(string queueName)
+        public async Task<Order> ReceiveMessage(string queueName)
         {
             try
             {
@@ -49,8 +52,9 @@ namespace AzureServiceBusWebApisDemo.ServiceBusDelivery.AzureServiceBus
                 }
                 else
                 {
-                    var messageBody = Encoding.UTF8.GetString(receivedMessage.Body);
-                    return messageBody;
+                    var deserializedObject = JsonConvert.DeserializeObject<Order>(receivedMessage.Body.ToString());
+                    // var messageBody = Encoding.UTF8.GetString(receivedMessage.Body);
+                    return deserializedObject;
                 }
             }
             catch (Exception e)
