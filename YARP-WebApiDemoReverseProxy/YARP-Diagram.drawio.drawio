@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="y7lbjETbvKikgL3caN7r">
+    <mxGraphModel dx="2812" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Ecommerce Shop Web Application&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;YARP - Yet Another Reverse Proxy&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;(forwards requests to backend services, take out responsability from the client side)&lt;/b&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="135" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-2" target="CFB0wLt-H7fmtZhhI61n-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-2" target="CFB0wLt-H7fmtZhhI61n-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-2" target="CFB0wLt-H7fmtZhhI61n-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-2" target="CFB0wLt-H7fmtZhhI61n-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-2" target="CFB0wLt-H7fmtZhhI61n-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-2" value="Frontend" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="472" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-3" value="&lt;div&gt;Service&lt;/div&gt;Users.API&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="562" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-4" target="CFB0wLt-H7fmtZhhI61n-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-4" value="&lt;div&gt;Service&lt;/div&gt;Payments.API&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="472" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-5" value="&lt;div&gt;Service&lt;/div&gt;Orders.API" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="382" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-9" value="React SPA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="430" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-10" value="orders.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="680" y="397" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-11" value="users.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="680" y="577" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-12" value="payments.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="680" y="487" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-14" value="orders.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="602" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-15" value="users.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="662" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-16" value="payments.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="632" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-17" value="New Service Created&lt;div&gt;Emails.API&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="560" y="652" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-18" value="emails.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="680" y="667" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-21" value="emails.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="160" y="697" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-22" value="&lt;b&gt;The frontend must keep track of services domain (routes)&lt;/b&gt;&lt;div&gt;&lt;b&gt;-very hard when new service is created&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;-very hard when new service is updated&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="542" width="350" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-23" value="&lt;div&gt;Service&lt;/div&gt;Auth.API" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.583;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-5" target="CFB0wLt-H7fmtZhhI61n-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-27" target="CFB0wLt-H7fmtZhhI61n-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-27" value="&lt;b&gt;And here, when an Auth.API or any other Service&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;is depending on both Frontend APP and any Backend&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Service is a major issue&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;It becomes very hard to mantain/test/scale/follow&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="455" y="270" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.567;entryY=0.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-2" target="CFB0wLt-H7fmtZhhI61n-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-30" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;BAD EXAMPLE&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="335" y="140" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-67" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Ecommerce Shop Web Application&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;YARP - Yet Another Reverse Proxy&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;(forwards requests to backend services, take out responsability from the client side)&lt;/b&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="145" y="712" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-73" target="CFB0wLt-H7fmtZhhI61n-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-73" value="Frontend" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1184" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-74" value="&lt;div&gt;Service&lt;/div&gt;Users.API&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1274" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-76" value="&lt;div&gt;Service&lt;/div&gt;Payments.API&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1184" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-77" value="&lt;div&gt;Service&lt;/div&gt;Orders.API" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1094" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-78" value="React SPA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1154" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-79" value="orders.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1109" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-80" value="users.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1289" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-81" value="payments.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1199" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-85" value="New Service Created&lt;div&gt;Emails.API&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1364" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-86" value="emails.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1379" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-88" value="&lt;b&gt;api.com&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="75" y="1259" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-89" value="&lt;div&gt;Service&lt;/div&gt;Auth.API" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="982" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.567;entryY=0.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-73" target="CFB0wLt-H7fmtZhhI61n-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-94" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;GOOD EXAMPLE&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="320" y="870" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-96" target="CFB0wLt-H7fmtZhhI61n-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-96" target="CFB0wLt-H7fmtZhhI61n-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-96" target="CFB0wLt-H7fmtZhhI61n-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-96" target="CFB0wLt-H7fmtZhhI61n-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CFB0wLt-H7fmtZhhI61n-96" target="CFB0wLt-H7fmtZhhI61n-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-96" value="&lt;div&gt;ReverseProxy&lt;/div&gt;&lt;div&gt;Main.Api&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1184" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-103" value="orders.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1244" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-104" value="users.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1304" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-105" value="payments.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1274" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-106" value="emails.api.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1339" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-107" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;-no responsability for client side (Frontend) to mantain requests&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;-no responsability for any service that requires authentication/authorization to handle&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;-all things related to auth will be manage in the ReverseProxy Service (Main.API)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="125" y="902" width="550" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CFB0wLt-H7fmtZhhI61n-108" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;-responsability for client side (Frontend) to mantain requests&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;-responsability for any service that requires authentication/authorization to handle&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="125" y="175" width="530" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
