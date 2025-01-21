@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{F43D1E8F-5893-0A94-F822-CC75362B9E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Writer", "Writer\Writer.csproj", "{DBF86205-5FF9-27F5-44A6-53B3DDDCB700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Article", "Article\Article.csproj", "{D09BAF2F-1965-50B8-9CDC-3EB1231D48E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F43D1E8F-5893-0A94-F822-CC75362B9E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43D1E8F-5893-0A94-F822-CC75362B9E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43D1E8F-5893-0A94-F822-CC75362B9E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43D1E8F-5893-0A94-F822-CC75362B9E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF86205-5FF9-27F5-44A6-53B3DDDCB700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF86205-5FF9-27F5-44A6-53B3DDDCB700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF86205-5FF9-27F5-44A6-53B3DDDCB700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF86205-5FF9-27F5-44A6-53B3DDDCB700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09BAF2F-1965-50B8-9CDC-3EB1231D48E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09BAF2F-1965-50B8-9CDC-3EB1231D48E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09BAF2F-1965-50B8-9CDC-3EB1231D48E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09BAF2F-1965-50B8-9CDC-3EB1231D48E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED1D019B-2EDE-4133-BBFA-5B3A6E7A602B}
+	EndGlobalSection
+EndGlobal
