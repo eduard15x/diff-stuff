@@ -7,7 +7,7 @@ namespace SendGrid_Example1.Services
     {
         public async Task SendEmail(string subject, string receiverEmail, string receiverName, string message)
         {
-            var apiKey = "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";
+            var apiKey = ""; // API KEY FROM SENDGRID
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("eduard.precup@devuard.com", "Devuard Company");
             var to = new EmailAddress(receiverEmail, receiverName);
