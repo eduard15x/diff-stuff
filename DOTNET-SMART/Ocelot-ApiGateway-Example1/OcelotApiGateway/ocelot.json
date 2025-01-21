@@ -13,7 +13,13 @@
           "Host": "localhost",
           "Port": 5174
         }
-      ]
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 3,
+        "PeriodTimeSpan": 10
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/writers/{id}",
