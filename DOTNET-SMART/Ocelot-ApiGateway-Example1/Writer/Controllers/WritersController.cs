@@ -17,6 +17,11 @@ public class WritersController : ControllerBase
     public async Task<IActionResult> GetWriters()
     {
         await Task.CompletedTask;
+
+        _logger.LogInformation("Block thread for 3 seconds in timeout.");
+        await Task.Delay(3000);
+        _logger.LogInformation("Release the thread after timeout expired.");
+
         return Ok("get writers");
     }
 

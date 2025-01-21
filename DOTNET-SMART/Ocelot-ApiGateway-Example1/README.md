@@ -2,6 +2,7 @@
 
 ## NEEDED PACKAGES
 * Ocelot
+* Ocelot.Cache.CacheManager (optional if you need caching)
 
 ## CONFIGURATION
 
