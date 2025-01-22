@@ -20,3 +20,8 @@ await app.UseOcelot();
 
 -all magic happens in json file
 -you can separate each endpoint or you can combine similars (like we did for articles GET/DELETE by id)
+
+
+
+## API Gateway, Rate Limiting, Load Balancer, Custom Policy for Authorization, Performance Testing for APIs
+* https://www.youtube.com/watch?v=2_hjz-325Fg&ab_channel=MilanJovanovi%C4%87
