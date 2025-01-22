@@ -42,3 +42,6 @@
 
 * https://microsoft.github.io/reverse-proxy/articles/getting-started.html
 * https://www.youtube.com/watch?v=5vW_z19MlYc&ab_channel=MohamadLawand
+
+## ADD AUTHENTICATION/AUTHORIZATION
+* https://www.youtube.com/watch?v=7Twb8LcIZeQ&ab_channel=MohamadLawand
