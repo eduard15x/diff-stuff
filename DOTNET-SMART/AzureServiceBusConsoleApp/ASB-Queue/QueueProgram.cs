@@ -1,17 +1,18 @@
 ﻿// // See https://aka.ms/new-console-template for more information
-// using Azure.Messaging.ServiceBus;
+using Azure.Messaging.ServiceBus;
 
-// // Create Connection
-// await using var client = new ServiceBusClient(
-//     "Endpoint=sb://learn-servicebus-queue.servicebus.windows.net/;SharedAccessKeyName=ConnectionStringQueue;SharedAccessKey=TYi2ti3sgMh8cPWT/+cD24cmJxIl9fby8+ASbDj9W4Y=;EntityPath=firstqueuetest"
-// );
+// Create Connection
+await using var client = new ServiceBusClient(
+    "Endpoint=sb://learn-servicebus-queue.servicebus.windows.net/;SharedAccessKeyName=ConnectionStringQueue;SharedAccessKey=TYi2ti3sgMh8cPWT/+cD24cmJxIl9fby8+ASbDj9W4Y=;EntityPath=firstqueuetest"
+);
 
-// // Create Sender
-// ServiceBusSender sender = client.CreateSender("firstqueuetest"); // you need to pass the quename
+// Create Sender
+ServiceBusSender sender = client.CreateSender("firstqueuetest"); // you need to pass the quename
 
-// // Send Message
-// await sender.SendMessageAsync(new ServiceBusMessage("Hello Eduard, your first message on queue to be dead-letter."));
+// Send Message
+await sender.SendMessageAsync(new ServiceBusMessage($"Hello Eduard, this message is send to queue to test Azure Function Service Bus Queue Trigger - {DateTime.Now}."));
 
+// await sender.SendMessageAsync(new ServiceBusMessage($"Hello Eduard, TEST."));
 // // Create Receiver
 // ServiceBusReceiver receiver = client.CreateReceiver("firstqueuetest"); // you need to pass the quename
 
