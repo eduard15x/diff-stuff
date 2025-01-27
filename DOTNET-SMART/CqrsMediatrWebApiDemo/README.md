@@ -1,5 +1,11 @@
 # CQRS and MediatR in .NET (Mediator Pattern)
 
+!!! TODO
+add notification to manage multiple handlers (when you create an entity send a notification to another handler)
+https://codewithmukesh.com/blog/cqrs-and-mediatr-in-aspnet-core/?utm_source=reddit
+
+https://github.com/codewithmukesh/dotnet-zero-to-hero-advanced-course
+
 * CQRS (command query responsability segregation) and the Mediator Pattern
 * MediatR Implementation
 * Requests with MediatR
