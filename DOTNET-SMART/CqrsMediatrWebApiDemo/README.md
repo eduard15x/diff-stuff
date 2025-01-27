@@ -13,3 +13,13 @@
 
 ## Nuget Packages Needed
 * MediatR
+
+# Before MediatR
+![BeforeCQRSandMediatR](https://github.com/user-attachments/assets/39da22fc-286a-4679-a551-532fc5cd07b6)
+
+
+
+# After MediatR
+![CQRSandMediatR](https://github.com/user-attachments/assets/88c0a756-1e2f-41ec-94d4-6914dea8d128)
+
+
