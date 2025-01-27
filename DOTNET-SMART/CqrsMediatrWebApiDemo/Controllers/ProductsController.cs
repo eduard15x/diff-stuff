@@ -8,24 +8,24 @@ namespace CqrsMediatrWebApiDemo.Controllers;
 public class ProductsController : ControllerBase
 {
     private readonly ILogger<ProductsController> _logger;
-    // private readonly IMediator _mediator; // this is composed by 2 interfaces (ISender, IPublisher)
-    private readonly ISender _sender;
+    // private readonly IMediator _mediator; // this is composed by 2 interfaces (IMediator, IPublisher)
+    private readonly IMediator _mediator;
 
     public ProductsController(
         ILogger<ProductsController> logger,
         // IMediator mediator,
-        ISender sender
+        IMediator sender
     )
     {
         _logger = logger;
         // _mediator = mediator;
-        _sender = sender;
+        _mediator = sender;
     }
 
     [HttpGet(Name = "GetProducts")]
     public async Task<ActionResult> GetProducts()
     {
-        var products = await _sender.Send(new GetProductsQuery());
+        var products = await _mediator.Send(new GetProductsQuery());
 
         return Ok(products);
 
@@ -35,9 +35,29 @@ public class ProductsController : ControllerBase
     [HttpGet("{id:int}", Name = "GetProductById")]
     public async Task<ActionResult> GetProductById(int id)
     {
-        var product = await _sender.Send(new GetProductByIdQuery(id));
+        var product = await _mediator.Send(new GetProductByIdQuery(id));
 
         return Ok(product);
     }
 
+    [HttpPost("create")]
+    public async Task<IActionResult> AddProduct([FromBody] Product newProduct)
+    {
+        var newProductCreated = new Product()
+        {
+            Id = newProduct.Id,
+            Name = newProduct.Name,
+        };
+
+        var result = await _mediator.Send(new CreateProductCommand(newProductCreated));
+        return Ok(result);
+    }
+
+
+    [HttpPost("update")]
+    public async Task<IActionResult> UpdateProduct([FromBody] Product newProduct)
+    {
+        var result = await _mediator.Send(new UpdateProductCommand(newProduct.Id, newProduct.Name));
+        return Ok(result);
+    }
 }

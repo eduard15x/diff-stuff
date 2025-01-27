@@ -19,7 +19,16 @@ public class FakeData
         await Task.CompletedTask;
     }
 
+    public async Task<bool> UpdateProduct(int prodId, string productName)
+    {
+        Product existingProd = _products.Single(x => x.Id == prodId);
+
+        existingProd.Name = productName;
+
+        return await Task.FromResult(true);
+    }
+
     public async Task<IEnumerable<Product>> GetProducts() => await Task.FromResult(_products);
 
-    public async Task<Product> GetProductById(int id) => await Task.FromResult(_products.SIngle(p => p.Id == id));
+    public async Task<Product> GetProductById(int id) => await Task.FromResult(_products.Single(p => p.Id == id));
 }
