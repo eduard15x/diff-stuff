@@ -23,3 +23,11 @@
 ![CQRSandMediatR](https://github.com/user-attachments/assets/88c0a756-1e2f-41ec-94d4-6914dea8d128)
 
 
+# MediatR explained
+![MediatR-in-details](https://github.com/user-attachments/assets/d533e7cb-5b0f-45a0-9abb-9a90974546d4)
+
+
+# no CQRS vs CQRS
+![noCQRSvsCRQS](https://github.com/user-attachments/assets/ed9f5407-5924-49bc-80c2-c38de78c54cc)
+
+
