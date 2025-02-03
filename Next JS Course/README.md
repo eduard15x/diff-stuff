@@ -331,6 +331,91 @@ In Next 14, Route Handlers that used the GET HTTP method were cached by default 
 
 ## MIDDLEWARE
 
-- create it at the root of src folder
+* create it at the root of src folder
 
 * intercept and control requests/responses
+
+# RENDERING
+
+## generateStaticParams() -> products/[id]/page.tsx (single product pd)
+
+export async function generateStaticParams() {
+  return [{ id: "1" }, { id: "2" }, { id: "3" }];
+}
+
+* works alongside dynamic route segments
+* generate static routes during build time
+* performance boost
+
+## dynamicParams() - export const dynamicParams = true / false
+
+* control what happens when a dynamic segment is visited that was not generated with generateStaticParams() function
+
+* true - statically render pages on demand for any dynamic segments not included in generateStaticParams()
+* false - return a 404 error page for dynamic segments not included in our pre-rendered list
+
+## STREAMING - use Suspense
+
+* allows for progressive UI rendering from the server
+* users can see parts of the page right away without waiting for everything to load
+* powerful for improving initial page load times and handling UI elements that depend on slower data fetches, which would normally hold up the entire route
+
+## SERVER & CLIENT Composition Patterns
+
+* Server Components
+  * fetching data
+  * accessing backend resources directly
+  * keeping sensitive information (access tokens and API keys) secure on the server
+  * handling large dependencies server-side -> less js for users to download
+
+* Client Components
+  * adding interactivity
+  * handling event listeners
+  * managing states and lifecycles effects
+  * impementing custom hooks
+
+### SERVER-ONLY CODE - server-only package
+
+* avoid importing server only code into client components
+
+### THIRD-PARTY Packages
+
+* example: react-slik carousel
+* create a component for the carousel and import it in a server component without using 'use client' (this component will be also server but client component)
+
+### CONTEXT PROVIDERS
+
+* to share global state
+* react context not supported in server components
+* SOLUTION: create context and render its provider inside a dedicated CLIENT COMPONENT
+
+# CLIENT-ONLY-CODE
+
+* to prevent unintended server side usage of client side code, we can use a package called client-only
+* client-only code works with browser-specific featured - think DOM manipulation, window object interactions or localStorage operations
+
+# INTERLEAVING SERVER & CLIENT COMPONENTS
+
+# FETCHING DATA & MUTATIONS
+
+## FETCHING DATA IN CLIENT COMPONENTS
+
+* classic way
+
+## FETCHING DATA IN SERVER COMPONENTS
+
+* almost classic way, but for loading and error handling you need new files
+
+## SEQUENTIAL DATA FETCHING - DATA FETCHING PATTERNS
+
+1. SEQUENTIAL
+    * requests in a component tree are dependend on each other -> this can lead to longer loading times (you need to use Suspense)
+
+2. PARALLEL
+    * requests in a route are eagerly initiated and will load data at the same time -> this reduces the total time it takes to load data
+
+## FETCHING FROM DATABASE
+
+* SQLite + Prisma
+
+## useFormStatus
