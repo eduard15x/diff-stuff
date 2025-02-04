@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/shared-components",
+    "apps/client-ui",
+    "apps/admin-panel"
+  ]
+}
