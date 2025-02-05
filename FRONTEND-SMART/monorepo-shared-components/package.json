@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "monorepo-shared-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "install": "yarn workspace @shared/ui build"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/@shared/*",
+      "packages/ui-client",
+      "packages/ui-admin"
+    ]
+  }
+}
