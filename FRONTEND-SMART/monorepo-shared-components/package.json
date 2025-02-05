@@ -4,8 +4,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "install": "yarn workspace @shared/ui build"
+    "install": "yarn workspace @shared/ui build",
+    "build-ui-client": "yarn workspace ui-client build",
+    "build-ui-admin": "yarn workspace ui-admin build"
   },
   "workspaces": {
     "packages": [
