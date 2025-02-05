@@ -48,6 +48,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "FRONTEND-SMART/monorepo-shared-components/packages/ui-client/dist" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+          is_static_export: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
