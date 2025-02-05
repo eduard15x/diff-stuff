@@ -35,6 +35,16 @@ jobs:
           cd FRONTEND-SMART/monorepo-shared-components
           yarn build-ui-admin # Build the UI app (This will generate the output in the build(dist) folder)
 
+      - name: Debug - Check Build Output ui-admin folder
+        run: |
+          echo "Checking build output ui-admin location..."
+          ls -R FRONTEND-SMART/monorepo-shared-components/packages/ui-admin
+
+      - name: Debug - Check Build Output dist folder
+        run: |
+          echo "Checking build output dist location..."
+          ls -R FRONTEND-SMART/monorepo-shared-components/packages/ui-admin/dist
+
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
