@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "inputValidation": {
+      "invalidFormat": "Test Test Test",
+      "invalidType": "No se admite el tipo de entrada.",
+      "hello1": "¡Hola, mundo!"
+    },
+    "common": {
+      "loading": "Cargando...",
+      "errors": {
+        "networkError": "Se ha producido un error de red.",
+        "serverError": "Se ha producido un error en el servidor."
+      }
+    }
+  }
+}

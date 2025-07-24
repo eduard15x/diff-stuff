@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "inputValidation": {
+      "invalidFormat": "The input format is invalid.",
+      "invalidType": "The input type is not supported.",
+      "hello1": "Hello, world!"
+    },
+    "common": {
+      "loading": "Loading...",
+      "errors": {
+        "networkError": "Network error occurred.",
+        "serverError": "Server error occurred."
+      }
+    }
+  }
+}
