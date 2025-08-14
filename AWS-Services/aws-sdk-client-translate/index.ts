@@ -78,13 +78,14 @@ const compareTranslationsWithSyncDeletions = async (
 };
 
 const startTranslation = async () => {
-  const translate = new Translate({
-    region: "eu-central-1",
-    credentials: {
-      accessKeyId: "AWS_ACCESS_KEY_ID",
-      secretAccessKey: "AWS_SECRET_ACCESS_KEY",
-    },
-  });
+  const translate = new Translate();
+  // const translate = new Translate({
+  //   region: "eu-central-1",
+  //   credentials: {
+  //     accessKeyId: "AWS_ACCESS_KEY_ID",
+  //     secretAccessKey: "AWS_SECRET_ACCESS_KEY",
+  //   },
+  // });
   const translationPath = "./translate-files";
 
   const sourceEn = JSON.parse(

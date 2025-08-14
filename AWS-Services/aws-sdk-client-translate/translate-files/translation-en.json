@@ -10,7 +10,8 @@
       "errors": {
         "networkError": "Network error occurred.",
         "serverError": "Server error occurred."
-      }
+      },
+      "testAWSCLient": "Testing AWS Client"
     }
   }
 }
