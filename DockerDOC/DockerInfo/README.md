@@ -60,4 +60,7 @@ Think of it as an entire port that manages thousands of shipping containers.
 - **Docker**: Builds, packages, and runs containers.
 - **Kubernetes**: Orchestrates and manages containers at scale.
 
-Once you have containers, Kubernetes manages them across clusters of machines, handling deployment, scaling, and
+Once you have containers, Kubernetes manages them across clusters of machines, handling deployment, scaling and load balancing
+
+<img width="987" height="535" alt="Screenshot 2025-08-14 at 15 07 41" src="https://github.com/user-attachments/assets/ff7ff366-aa9f-4b97-8050-230f2417c98b" />
+
