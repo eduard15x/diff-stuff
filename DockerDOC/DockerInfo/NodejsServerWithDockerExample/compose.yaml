@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: .
+    ports:
+      - '9000:9000'
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data_volume:/var/lib/postgresql/data
+
+volumes:
+  db_data_volume: # it will create a named volume where data will be stored

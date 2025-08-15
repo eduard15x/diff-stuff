@@ -12,6 +12,11 @@ docker --version
 docker --help
 ```
 
+### Docker Init All Files you need
+```sh
+docker init
+```
+
 ---
 
 ## 📋 List Commands
@@ -101,6 +106,22 @@ docker run -p 9000:9000 nodejs_server_test_docker_eduard
 docker run -d -p 9000:9000 nodejs_server_test_docker_eduard
 ```
 
+---
+
+## Docker Compose
+
+### Compose all your services from compose.yaml and run all containers together
+```sh
+docker compose up
+```
+
+### Shut down all containers that are working together
+```sh
+docker compose down
+```
+
+---
+
 ## Logs
 
 ## View Container Logs
@@ -108,7 +129,7 @@ docker run -d -p 9000:9000 nodejs_server_test_docker_eduard
 docker logs <container_id_or_name>
 ```
 
-
+---
 
 ## Official Documentation
 * https://docs.docker.com/reference/cli/docker/
