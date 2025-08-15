@@ -1,0 +1,15 @@
+{
+  "name": "NodejsServerWithDockerExample",
+  "version": "1.0.0",
+  "description": "A simple Node.js server example with Docker support.",
+  "author": "Edy",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
