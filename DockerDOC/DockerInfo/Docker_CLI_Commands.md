@@ -108,6 +108,38 @@ docker run -d -p 9000:9000 nodejs_server_test_docker_eduard
 
 ---
 
+### Rename an image tag
+```sh
+docker tag hello-dotnet-docker:latest hello-dotnet-docker:1.0
+```
+
+---
+
+### Create an image with specific tag
+```sh
+docker build -t hello-dotnet-docker:1.1 .
+```
+
+---
+
+
+### Publish local image on docker hub repository remote
+```sh
+-docker tag hello-dotnet-docker:1.2 eduard15x/hello-dotnet-docker:1.2
+-docker push eduard15x/hello-dotnet-docker:1.2
+```
+
+---
+
+### Login or Logout from dockerhub
+```sh
+-docker login
+-docker logout
+```
+
+---
+
+
 ## Docker Compose
 
 ### Compose all your services from compose.yaml and run all containers together
