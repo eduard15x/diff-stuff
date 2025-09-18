@@ -34,6 +34,7 @@ module.exports = {
       // },
       remotes: {
         app1: "app1@http://localhost:8083/remoteEntry.js",
+        "app3-vite-react-ts": "app3-vite-react-ts@http://localhost:4173/assets/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({
