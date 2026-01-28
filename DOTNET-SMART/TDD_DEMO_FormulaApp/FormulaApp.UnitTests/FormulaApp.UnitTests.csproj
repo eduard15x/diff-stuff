@@ -22,8 +22,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FormulaApp.API\FormulaApp.API.csproj" />
-  </ItemGroup>
-
 </Project>
