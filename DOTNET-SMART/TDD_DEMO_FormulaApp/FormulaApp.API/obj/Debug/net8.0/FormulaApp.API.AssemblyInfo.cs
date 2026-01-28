@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22fd3ea269f021859fd2985186996a879e3963a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4d3a81a94523be6dd0073391d4d18280858b897")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

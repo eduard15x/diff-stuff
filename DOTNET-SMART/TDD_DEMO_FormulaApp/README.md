@@ -16,4 +16,6 @@ dotnet sln add **/*.csproj
 [name.unitTest]
 dotnet add reference [name.api.csproj]
 dotnet add package Moq
+    -mock created services and allow to inject into constructors
+    -mimic DEPENDENCY INJECTION
 dotnet add package FluentAssertions

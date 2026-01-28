@@ -1,19 +1,31 @@
+namespace FormulaApp.API.Controllers;
+
+using FormulaApp.API.Models;
+using FormulaApp.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
 public class FansController : ControllerBase
 {
+    private readonly IFanService _fanService;
+
+    public FansController(IFanService fanService)
+    {
+        _fanService = fanService;
+    }
+
     [HttpGet(Name = "GetFans")]
     public async Task<IActionResult> GetFans()
     {
         // Simulate fetching fan data
-        // var fans = new[]
-        // {
-        //     new { Id = 1, Name = "Fan A", Team = "Team X" },
-        //     new { Id = 2, Name = "Fan B", Team = "Team Y" }
-        // };
+        List<Fan> fans = await _fanService.GetAllFans();
 
-        return Ok("fans");
+        if (fans.Any())
+        {
+            return Ok(fans);
+        }
+
+        return NotFound();
     }
 }
