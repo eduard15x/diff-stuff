@@ -8,9 +8,9 @@ namespace OrdersAPI.Handlers;
 
 public class GetOrderByIdQueryHandler: IQueryHandler<GetOrderByIdQuery, OrderDto?>
 {
-    private readonly AppDbContext _dbContext;
+    private readonly ReadDbContext _dbContext;
 
-    public GetOrderByIdQueryHandler(AppDbContext dbContext)
+    public GetOrderByIdQueryHandler(ReadDbContext dbContext)
     {
         _dbContext = dbContext;
     }

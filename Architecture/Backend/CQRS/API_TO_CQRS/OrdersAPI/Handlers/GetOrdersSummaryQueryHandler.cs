@@ -8,9 +8,9 @@ namespace OrdersAPI.Handlers;
 
 public class GetOrdersSummaryQueryHandler : IQueryHandler<GetOrdersSummaryQuery, List<OrderSummaryDto>?>
 {
-    private readonly AppDbContext _dbContext;
+    private readonly ReadDbContext _dbContext;
 
-    public GetOrdersSummaryQueryHandler(AppDbContext dbContext)
+    public GetOrdersSummaryQueryHandler(ReadDbContext dbContext)
     {
         _dbContext = dbContext;
     }

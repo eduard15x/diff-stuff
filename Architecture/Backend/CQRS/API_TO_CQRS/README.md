@@ -1,6 +1,8 @@
 dotnet add package microsoft.entityframeworkcore.sqlite --version 8.0.2
 dotnet add package microsoft.entityframeworkcore.design --version 8.0.2
+//later
 dotnet add package FluentValidation --version 8.0.2
+dotnet add package mediatr --version 8.0.2
 
 -> create Model
 
@@ -99,4 +101,15 @@ dotnet add package FluentValidation --version 8.0.2
     }
 
 
--Events (IEventPublisher)
+-Events (IEventPublisher) + ConsoleEventPublisher.cs + OrderCreatedEvent.cs
+
+-Separate DB (write and read) -> WriteDBContext, ReadDBContext
+-fix connections strings... and update controllers
+-dotnet ef migrations add InitialCreateWriteDbContext —context WriteDbContext —output-dir Migrations/WriteDb
+-dotnet ef database update --context WriteDbContext
+
+-create event publisher and event handler
+-create orderProjectionHandler
+
+
+-replace stuff with MediatR
