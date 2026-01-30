@@ -24,9 +24,9 @@ builder.Services.AddScoped<ICommandHandler<CreateOrderCommand, OrderDto>, Create
 builder.Services.AddScoped<IQueryHandler<GetOrderByIdQuery, OrderDto?>, GetOrderByIdQueryHandler>();
 builder.Services.AddScoped<IQueryHandler<GetOrdersSummaryQuery, List<OrderSummaryDto>?>, GetOrdersSummaryQueryHandler>();
 builder.Services.AddScoped<IValidator<CreateOrderCommand>, CreateOrderCommandValidation>();
-builder.Services.AddScoped<IEventPublisher, ConsoleEventPublisher>();
-builder.Services.AddScoped<IEventPublisher, InProcessEventPublisher>();
+builder.Services.AddScoped<IEventPublisher, KafkaEventPublisher>();
 builder.Services.AddScoped<IEventHandler<OrderCreatedEvent>, OrderCreatedProjectionHandler>();
+builder.Services.AddHostedService<KafkaConsumerHostedService>();
 
 builder.Services.AddControllers();
 
