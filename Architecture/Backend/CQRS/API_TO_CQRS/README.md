@@ -81,3 +81,22 @@ dotnet add package FluentValidation --version 8.0.2
 
 -update existing commands and queries with new interface
 -register interface in Program.cs (scoped)
+-update controllers... use injected dependencies...
+
+-add fluent validation for commamnds...
+-register them to Program.cs
+    -Commands/CreateOrderCommandValidation.cs
+
+    public class CreateOrderCommandValidation: AbstractValidator<CreateOrderCommand>
+    {
+        public CreateOrderCommandValidation()
+        {
+            RuleFor(x => x.FirstName).NotEmpty();
+            RuleFor(x => x.LastName).NotEmpty();
+            RuleFor(x => x.Status).NotEmpty();
+            RuleFor(x => x.TotalCost).GreaterThan(0);
+        }
+    }
+
+
+-Events (IEventPublisher)

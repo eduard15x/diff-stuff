@@ -1,5 +1,6 @@
 namespace OrdersAPI.Controllers;
 
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OrdersAPI.Commands;
@@ -19,6 +20,21 @@ public class OrderControllers : ControllerBase
     // {
     //     _context = context;
     // }
+
+    [HttpGet]
+    [Route("list")]
+    public async Task<IActionResult> GetOrdersSummary(
+        IQueryHandler<GetOrdersSummaryQuery, List<OrderSummaryDto>> handler
+    )
+    {
+        // var orders = await GetOrdersSummaryQueryHandler.Handle(
+        //     new GetOrdersSummaryQuery(),
+        //     _context
+        // );
+
+        var orders = await handler.HandleAsync(new GetOrdersSummaryQuery());
+        return Ok(orders);
+    }
 
     [HttpGet]
     [Route("{id}", Name = "GetOrderById")]
@@ -52,18 +68,26 @@ public class OrderControllers : ControllerBase
         //     command,
         //     _context
         // );
-
-        var createdOrder = await handler.HandleAsync(command);
-        if (createdOrder == null)
+        try
         {
-            return BadRequest("Could not create order");
+
+            var createdOrder = await handler.HandleAsync(command);
+            if (createdOrder == null)
+            {
+                return BadRequest("Could not create order");
+            }
+
+            // _context.Orders.Add(order);
+            // await _context.SaveChangesAsync();
+
+            return Created($"/api/order{createdOrder.Id}", createdOrder);
+
+            // return CreatedAtRoute("GetOrderById", new { id = order.Id }, order);
         }
-
-        // _context.Orders.Add(order);
-        // await _context.SaveChangesAsync();
-
-        return Created($"/api/order{createdOrder.Id}", createdOrder); 
-
-        // return CreatedAtRoute("GetOrderById", new { id = order.Id }, order);
+        catch (ValidationException ex)
+        {
+            var errors = ex.Errors.Select(e => new { e.PropertyName, e.ErrorMessage });
+            return BadRequest(new { Errors = errors });
+        }
     }
 }
