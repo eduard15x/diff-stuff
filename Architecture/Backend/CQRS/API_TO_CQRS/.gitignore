@@ -1,0 +1,82 @@
+# .gitignore for .NET projects (including DLLs)
+
+# Build directories
+bin/
+obj/
+publish/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+.project.lock.json
+.nuget/
+
+# Build outputs and debug files
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# Test and coverage
+TestResults/
+*.trx
+coverage.*
+*.coverage
+*.coveragexml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Entity Framework / DB files
+*.db
+*.mdf
+*.ldf
+*.bak
+
+# User-specific / local settings
+local.settings.json
+*.env
+secrets.json
+appsettings.*.Local.json
+
+# IDE / tool caches
+_ReSharper*/
+*.DotSettings.user
+*.resharper
+.idea/
+*.suo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Packages / artifacts
+node_modules/
+bower_components/
+
+# All bin folders anywhere
+**/bin/
+**/obj/
+
+# Debug & Release
+**/Debug/
+**/Release/
+
+# Test coverage artifacts
+**/CoverletSourceRootsMapping_*
